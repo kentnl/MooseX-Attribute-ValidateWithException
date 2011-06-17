@@ -75,10 +75,10 @@ Use of this module assumes several things.
 
 =over 4
 
-=item 1. You are ok with your code breaking in a future Moose release.
+=item 1. You are o.k. with your code breaking in a future Moose release.
 
-=item 2. You are ok with re-writing any and all code that depends on this
-functionality, if a future Moose release is incompatbile with this module.
+=item 2. You are o.k. with re-writing any and all code that depends on this
+functionality, if a future Moose release is incompatible with this module.
 
 =back
 
