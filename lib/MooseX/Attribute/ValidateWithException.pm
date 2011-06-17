@@ -29,13 +29,13 @@ version 0.1.0
 
 =head1 SYNOPSIS
 
-  { 
+  {
     package Foo;
     use Moose;
     use MooseX::Attribute::ValidateWithException;
 
-    has foo => ( 
-      isa => 'Str', 
+    has foo => (
+      isa => 'Str',
       is  => 'rw',
       required => 1,
     );
@@ -44,10 +44,10 @@ version 0.1.0
   }
 
   use Try::Tiny;
-  
+
   try {
     Foo->new( foo => { this_is => [qw( not what we were wanting )] } );
-  } catch { 
+  } catch {
     say $_->name if blessed( $_ ) && $_->isa('Thingy');
   };
 
