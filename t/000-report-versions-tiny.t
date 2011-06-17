@@ -48,6 +48,7 @@ sub pmver {
     return sprintf('%-45s => %-10s%-15s%s', $module, $pmver, $wanted, "\n");
 }
 
+eval { $v .= pmver('Data::Dump','any version') };
 eval { $v .= pmver('Dist::Zilla::PluginBundle::Author::KENTNL','1.0.0') };
 eval { $v .= pmver('Dist::Zilla::PluginBundle::Author::KENTNL::Lite','0.01009803') };
 eval { $v .= pmver('English','any version') };
@@ -55,6 +56,9 @@ eval { $v .= pmver('File::Find','any version') };
 eval { $v .= pmver('File::Temp','any version') };
 eval { $v .= pmver('Module::Build','0.3601') };
 eval { $v .= pmver('Moose','any version') };
+eval { $v .= pmver('Moose::Exporter','any version') };
+eval { $v .= pmver('Moose::Role','any version') };
+eval { $v .= pmver('StackTrace::Auto','any version') };
 eval { $v .= pmver('Test::More','0.88') };
 
 

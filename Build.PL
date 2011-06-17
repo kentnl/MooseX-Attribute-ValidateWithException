@@ -27,7 +27,11 @@ my %module_build_args = (
   'recommends' => {},
   'recursive_test_files' => 1,
   'requires' => {
-    'Moose' => '0'
+    'Data::Dump' => '0',
+    'Moose' => '0',
+    'Moose::Exporter' => '0',
+    'Moose::Role' => '0',
+    'StackTrace::Auto' => '0'
   },
   'script_files' => []
 );

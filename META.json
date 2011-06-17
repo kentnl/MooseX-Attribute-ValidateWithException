@@ -37,7 +37,11 @@
       },
       "runtime" : {
          "requires" : {
-            "Moose" : 0
+            "Data::Dump" : 0,
+            "Moose" : 0,
+            "Moose::Exporter" : 0,
+            "Moose::Role" : 0,
+            "StackTrace::Auto" : 0
          }
       },
       "test" : {
@@ -53,17 +57,37 @@
       "MooseX::Attribute::ValidateWithException" : {
          "file" : "lib/MooseX/Attribute/ValidateWithException.pm",
          "version" : "v0.1.0"
+      },
+      "MooseX::Attribute::ValidateWithException::AttributeRole" : {
+         "file" : "lib/MooseX/Attribute/ValidateWithException/AttributeRole.pm",
+         "version" : "v0.1.0"
+      },
+      "MooseX::Attribute::ValidateWithException::Exception" : {
+         "file" : "lib/MooseX/Attribute/ValidateWithException/Exception.pm",
+         "version" : "v0.1.0"
       }
    },
    "release_status" : "stable",
+   "resources" : {
+      "homepage" : "http://github.com/kentfredric/MooseX-Attribute-ValidateWithException",
+      "repository" : {
+         "type" : "git",
+         "url" : "http://github.com/kentfredric/MooseX-Attribute-ValidateWithException",
+         "web" : "http://github.com/kentfredric/MooseX-Attribute-ValidateWithException"
+      }
+   },
    "version" : "0.1.0",
    "x_BuiltWith" : {
       "modules" : {
+         "Data::Dump" : "1.19",
          "Dist::Zilla::PluginBundle::Author::KENTNL" : "1.0.9",
          "Dist::Zilla::PluginBundle::Author::KENTNL::Lite" : "1.0.6",
          "File::Temp" : "0.22",
          "Module::Build" : "0.38",
          "Moose" : "2.0007",
+         "Moose::Exporter" : "2.0007",
+         "Moose::Role" : "2.0007",
+         "StackTrace::Auto" : "0.102080",
          "Test::More" : "0.98"
       },
       "perl" : {
