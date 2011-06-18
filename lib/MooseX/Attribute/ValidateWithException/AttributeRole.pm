@@ -4,7 +4,7 @@ use warnings;
 
 package MooseX::Attribute::ValidateWithException::AttributeRole;
 BEGIN {
-  $MooseX::Attribute::ValidateWithException::AttributeRole::VERSION = '0.1.0';
+  $MooseX::Attribute::ValidateWithException::AttributeRole::VERSION = '0.1.1';
 }
 use Moose::Role;
 
@@ -32,7 +32,7 @@ override '_inline_check_constraint' => sub {
     |,
     $tc     => $value,
     $tc_obj => $value,
-    $self->_inline_throw_error($value),
+    $self->_inline_throw_error('$message'),
     $self->_inline_throw_error(
       sprintf q|
         MooseX::Attribute::ValidateWithException::Exception->new(
@@ -88,7 +88,7 @@ MooseX::Attribute::ValidateWithException::AttributeRole
 
 =head1 VERSION
 
-version 0.1.0
+version 0.1.1
 
 =head1 AUTHOR
 
