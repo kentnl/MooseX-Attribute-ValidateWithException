@@ -29,7 +29,6 @@ provides:
     file: lib/MooseX/Attribute/ValidateWithException/Exception.pm
     version: v0.1.0
 requires:
-  Data::Dump: 0
   Moose: 0
   Moose::Exporter: 0
   Moose::Role: 0
@@ -40,7 +39,6 @@ resources:
 version: 0.1.0
 x_BuiltWith:
   modules:
-    Data::Dump: 1.19
     Dist::Zilla::PluginBundle::Author::KENTNL: 1.0.9
     Dist::Zilla::PluginBundle::Author::KENTNL::Lite: 1.0.6
     File::Temp: 0.22

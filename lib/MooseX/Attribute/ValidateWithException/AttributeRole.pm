@@ -7,7 +7,7 @@ BEGIN {
   $MooseX::Attribute::ValidateWithException::AttributeRole::VERSION = '0.1.0';
 }
 use Moose::Role;
-use Data::Dump qw( dump );
+
 override '_inline_check_constraint' => sub {
 
   #    my $orig = shift;

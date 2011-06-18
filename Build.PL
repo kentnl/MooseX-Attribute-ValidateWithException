@@ -28,7 +28,6 @@ my %module_build_args = (
   'recommends' => {},
   'recursive_test_files' => 1,
   'requires' => {
-    'Data::Dump' => '0',
     'Moose' => '0',
     'Moose::Exporter' => '0',
     'Moose::Role' => '0',
