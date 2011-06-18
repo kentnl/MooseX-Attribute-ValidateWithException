@@ -11,6 +11,7 @@ my %module_build_args = (
     'File::Find' => '0',
     'File::Temp' => '0',
     'Module::Build' => '0.3601',
+    'Test::Fatal' => '0',
     'Test::More' => '0.88'
   },
   'configure_requires' => {
@@ -31,7 +32,7 @@ my %module_build_args = (
     'Moose' => '0',
     'Moose::Exporter' => '0',
     'Moose::Role' => '0',
-    'StackTrace::Auto' => '0'
+    'Throwable::Error' => '0'
   },
   'script_files' => []
 );

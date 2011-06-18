@@ -19,9 +19,17 @@ use Test::More;
   no Moose;
 }
 
-my $instance = Example->new( 
-  foo => [ ],
-);
+use Test::Fatal;
+
+my $e = exception {
+  my $instance = Example->new( foo => [], );
+};
+
+isa_ok( $e, 'MooseX::Attribute::ValidateWithException::Exception' );
+
+#note explain $e;
+
+#note "$e";
 
 done_testing;
 

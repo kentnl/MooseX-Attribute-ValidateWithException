@@ -13,10 +13,7 @@ use Moose::Exporter;
 require MooseX::Attribute::ValidateWithException::AttributeRole;
 
 Moose::Exporter->setup_import_methods(
-  class_metaroles => { 
-    attribute => [ 'MooseX::Attribute::ValidateWithException::AttributeRole' ],
-  },
-);
+  class_metaroles => { attribute => ['MooseX::Attribute::ValidateWithException::AttributeRole'], }, );
 
 
 1;
