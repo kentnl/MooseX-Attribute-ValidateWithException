@@ -5,7 +5,12 @@ package MooseX::Attribute::ValidateWithException;
 
 # ABSTRACT: Cause validation failures to throw exception objects.
 
-use Moose;
+use Moose qw();
+use Moose::Exporter;
+require MooseX::Attribute::ValidateWithException::AttributeRole;
+
+Moose::Exporter->setup_import_methods(
+  class_metaroles => { attribute => ['MooseX::Attribute::ValidateWithException::AttributeRole'], }, );
 
 =head1 DESCRIPTION
 
@@ -67,8 +72,5 @@ which may be essential for handling exceptions.
   };
 
 =cut
-
-__PACKAGE__->meta->make_immutable;
-no Moose;
 
 1;
