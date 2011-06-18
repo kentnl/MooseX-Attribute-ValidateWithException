@@ -2,6 +2,9 @@ use strict;
 use warnings;
 
 package MooseX::Attribute::ValidateWithException;
+BEGIN {
+  $MooseX::Attribute::ValidateWithException::VERSION = '0.1.0';
+}
 
 # ABSTRACT: Cause validation failures to throw exception objects.
 
@@ -11,6 +14,44 @@ require MooseX::Attribute::ValidateWithException::AttributeRole;
 
 Moose::Exporter->setup_import_methods(
   class_metaroles => { attribute => ['MooseX::Attribute::ValidateWithException::AttributeRole'], }, );
+
+
+1;
+
+__END__
+=pod
+
+=head1 NAME
+
+MooseX::Attribute::ValidateWithException - Cause validation failures to throw exception objects.
+
+=head1 VERSION
+
+version 0.1.0
+
+=head1 SYNOPSIS
+
+  {
+    package Foo;
+    use Moose;
+    use MooseX::Attribute::ValidateWithException;
+
+    has foo => (
+      isa => 'Str',
+      is  => 'rw',
+      required => 1,
+    );
+    __PACKAGE__->meta->make_immutable;
+    no Moose;
+  }
+
+  use Try::Tiny;
+
+  try {
+    Foo->new( foo => { this_is => [qw( not what we were wanting )] } );
+  } catch {
+    say $_->name if blessed( $_ ) && $_->isa('Thingy');
+  };
 
 =head1 DESCRIPTION
 
@@ -47,30 +88,16 @@ I'm not saying I won't do my best to provide forwards compatibility, but it is
 highly unlikely it will be possible, due to differences in package naming
 which may be essential for handling exceptions.
 
-=head1 SYNOPSIS
+=head1 AUTHOR
 
-  {
-    package Foo;
-    use Moose;
-    use MooseX::Attribute::ValidateWithException;
+Kent Fredric <kentnl@cpan.org>
 
-    has foo => (
-      isa => 'Str',
-      is  => 'rw',
-      required => 1,
-    );
-    __PACKAGE__->meta->make_immutable;
-    no Moose;
-  }
+=head1 COPYRIGHT AND LICENSE
 
-  use Try::Tiny;
+This software is copyright (c) 2011 by Kent Fredric <kentnl@cpan.org>.
 
-  try {
-    Foo->new( foo => { this_is => [qw( not what we were wanting )] } );
-  } catch {
-    say $_->name if blessed( $_ ) && $_->isa('Thingy');
-  };
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
 =cut
 
-1;
