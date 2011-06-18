@@ -5,6 +5,9 @@ package MooseX::Attribute::ValidateWithException::Exception;
 BEGIN {
   $MooseX::Attribute::ValidateWithException::Exception::VERSION = '0.1.0';
 }
+
+# ABSTRACT: An Exception object to represent "Normal" moose validation failures.
+
 use Moose;
 
 #with 'StackTrace::Auto';
@@ -52,7 +55,7 @@ sub _generate_message {
 #with 'StackTrace::Auto';
 
 __PACKAGE__->meta->make_immutable( inline_constructor => 0 );
-
+no Moose;
 1;
 
 
@@ -61,7 +64,7 @@ __END__
 
 =head1 NAME
 
-MooseX::Attribute::ValidateWithException::Exception
+MooseX::Attribute::ValidateWithException::Exception - An Exception object to represent "Normal" moose validation failures.
 
 =head1 VERSION
 
