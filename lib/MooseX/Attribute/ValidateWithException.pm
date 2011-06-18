@@ -3,7 +3,7 @@ use warnings;
 
 package MooseX::Attribute::ValidateWithException;
 BEGIN {
-  $MooseX::Attribute::ValidateWithException::VERSION = '0.1.0';
+  $MooseX::Attribute::ValidateWithException::VERSION = '0.1.1';
 }
 
 # ABSTRACT: Cause validation failures to throw exception objects.
@@ -27,7 +27,7 @@ MooseX::Attribute::ValidateWithException - Cause validation failures to throw ex
 
 =head1 VERSION
 
-version 0.1.0
+version 0.1.1
 
 =head1 SYNOPSIS
 

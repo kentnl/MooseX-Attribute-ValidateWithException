@@ -56,15 +56,15 @@
    "provides" : {
       "MooseX::Attribute::ValidateWithException" : {
          "file" : "lib/MooseX/Attribute/ValidateWithException.pm",
-         "version" : "v0.1.0"
+         "version" : "v0.1.1"
       },
       "MooseX::Attribute::ValidateWithException::AttributeRole" : {
          "file" : "lib/MooseX/Attribute/ValidateWithException/AttributeRole.pm",
-         "version" : "v0.1.0"
+         "version" : "v0.1.1"
       },
       "MooseX::Attribute::ValidateWithException::Exception" : {
          "file" : "lib/MooseX/Attribute/ValidateWithException/Exception.pm",
-         "version" : "v0.1.0"
+         "version" : "v0.1.1"
       }
    },
    "release_status" : "stable",
@@ -76,7 +76,7 @@
          "web" : "http://github.com/kentfredric/MooseX-Attribute-ValidateWithException"
       }
    },
-   "version" : "0.1.0",
+   "version" : "0.1.1",
    "x_BuiltWith" : {
       "modules" : {
          "Dist::Zilla::PluginBundle::Author::KENTNL" : "1.0.9",
