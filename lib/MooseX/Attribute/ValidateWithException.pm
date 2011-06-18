@@ -8,13 +8,15 @@ BEGIN {
 
 # ABSTRACT: Cause validation failures to throw exception objects.
 
-use Moose qw();
+require Moose;
 use Moose::Exporter;
 require MooseX::Attribute::ValidateWithException::AttributeRole;
 
 Moose::Exporter->setup_import_methods(
   class_metaroles => { attribute => ['MooseX::Attribute::ValidateWithException::AttributeRole'], }, );
 
+
+no Moose;
 
 1;
 
