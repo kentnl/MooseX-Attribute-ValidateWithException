@@ -16,8 +16,6 @@ Moose::Exporter->setup_import_methods(
   class_metaroles => { attribute => ['MooseX::Attribute::ValidateWithException::AttributeRole'], }, );
 
 
-no Moose;
-
 1;
 
 __END__
