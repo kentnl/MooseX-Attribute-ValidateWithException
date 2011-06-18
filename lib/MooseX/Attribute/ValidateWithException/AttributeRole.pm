@@ -14,6 +14,7 @@ override '_inline_check_constraint' => sub {
   my $attribute_name = quotemeta( $self->name );
   return unless $self->has_type_constraint;
 
+  ## no critic ( ProhibitImplicitNewlines RequireInterpolationOfMetachars )
   return (
     sprintf q|
        if ( ! %s->( %s ) ) {

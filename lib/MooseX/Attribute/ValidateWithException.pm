@@ -5,7 +5,7 @@ package MooseX::Attribute::ValidateWithException;
 
 # ABSTRACT: Cause validation failures to throw exception objects.
 
-use Moose qw();
+require Moose;
 use Moose::Exporter;
 require MooseX::Attribute::ValidateWithException::AttributeRole;
 
