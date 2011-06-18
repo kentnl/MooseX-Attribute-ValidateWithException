@@ -29,7 +29,7 @@ override '_inline_check_constraint' => sub {
     |,
     $tc     => $value,
     $tc_obj => $value,
-    $self->_inline_throw_error($value),
+    $self->_inline_throw_error('$message'),
     $self->_inline_throw_error(
       sprintf q|
         MooseX::Attribute::ValidateWithException::Exception->new(

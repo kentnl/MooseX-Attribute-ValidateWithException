@@ -1,6 +1,8 @@
 Release history for MooseX-Attribute-ValidateWithException
 
 {{$NEXT}}
+ [Bugfix]
+ - Now actually propagates exceptions thrown from inlined attributes.
 
 0.1.0 2011-06-18T00:27:59Z
  - First version.
