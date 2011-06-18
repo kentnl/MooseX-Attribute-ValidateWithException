@@ -49,7 +49,7 @@ has message => (
 
 sub _generate_message {
   my ($self) = shift;
-  return "Attribute (" . $self->attribute_name . ") does not pass the type constraint because: " . $self->constraint_message;
+  return 'Attribute (' . $self->attribute_name . ') does not pass the type constraint because: ' . $self->constraint_message;
 }
 
 #with 'StackTrace::Auto';
