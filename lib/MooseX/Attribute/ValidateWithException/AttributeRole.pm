@@ -4,7 +4,7 @@ use warnings;
 
 package MooseX::Attribute::ValidateWithException::AttributeRole;
 use Moose::Role;
-use Data::Dump qw( dump );
+
 override '_inline_check_constraint' => sub {
 
   #    my $orig = shift;
