@@ -4,7 +4,7 @@ use warnings;
 
 package MooseX::Attribute::ValidateWithException::AttributeRole;
 BEGIN {
-  $MooseX::Attribute::ValidateWithException::AttributeRole::VERSION = '0.1.1';
+  $MooseX::Attribute::ValidateWithException::AttributeRole::VERSION = '0.1.2';
 }
 use Moose::Role;
 
@@ -88,7 +88,7 @@ MooseX::Attribute::ValidateWithException::AttributeRole
 
 =head1 VERSION
 
-version 0.1.1
+version 0.1.2
 
 =head1 AUTHOR
 

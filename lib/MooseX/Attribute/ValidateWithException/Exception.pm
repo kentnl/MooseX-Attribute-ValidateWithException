@@ -3,7 +3,7 @@ use warnings;
 
 package MooseX::Attribute::ValidateWithException::Exception;
 BEGIN {
-  $MooseX::Attribute::ValidateWithException::Exception::VERSION = '0.1.1';
+  $MooseX::Attribute::ValidateWithException::Exception::VERSION = '0.1.2';
 }
 
 # ABSTRACT: An Exception object to represent "Normal" moose validation failures.
@@ -68,7 +68,7 @@ MooseX::Attribute::ValidateWithException::Exception - An Exception object to rep
 
 =head1 VERSION
 
-version 0.1.1
+version 0.1.2
 
 =head1 AUTHOR
 
