@@ -27,6 +27,7 @@ EXCEPTION
 sub __generate_check {
   my ( $self, %params ) = @_ ;
   if ( $self->type_constraint->can_be_inlined ) {
+    ## no critic (ProtectPrivateSubs)
     return '! ( ' . $self->type_constraint->_inline_check( $params{value} ) . ')';
   } else {
     return '! ( ' . $params{tc} . '->(' . $params{value} . ') )';
