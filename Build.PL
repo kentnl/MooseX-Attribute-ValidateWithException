@@ -22,13 +22,13 @@ my %module_build_args = (
     'Kent Fredric <kentnl@cpan.org>'
   ],
   'dist_name' => 'MooseX-Attribute-ValidateWithException',
-  'dist_version' => '0.1.1',
+  'dist_version' => '0.2.0',
   'license' => 'perl',
   'module_name' => 'MooseX::Attribute::ValidateWithException',
   'recommends' => {},
   'recursive_test_files' => 1,
   'requires' => {
-    'Moose' => '0',
+    'Moose' => '2.0200',
     'Moose::Exporter' => '0',
     'Moose::Role' => '0',
     'Throwable::Error' => '0'

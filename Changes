@@ -1,5 +1,18 @@
 Release history for MooseX-Attribute-ValidateWithException
 
+0.2.0 2011-07-26T00:18:24Z
+ [Bugfix]
+ - Fix compatibility with Moose 2.020???. This hopefully fixes rt#60461 (
+   https://rt.cpan.org/Public/Bug/Display.html?id=69461 ), thanks ANDK for
+   reporting.
+
+ [Dependencies]
+ - Moose 2.0200 is the minimum Moose version now.
+
+ [Packaging]
+ - Bumping minor version due to dependency changes being not reverse
+   compatible.
+
 0.1.1 2011-06-18T02:24:30Z
  [Bugfix]
  - Now actually propagates exceptions thrown from inlined attributes.
