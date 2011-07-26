@@ -27,10 +27,10 @@ has 'constraint_message' => (
   required => 1,
 );
 
-has 'constraint' => (
-  is       => 'ro',
-  required => 1,
-);
+# has 'constraint' => (
+#  is       => 'ro',
+#  required => 1,
+#);
 
 has 'constraint_name' => (
   isa      => 'Str',
