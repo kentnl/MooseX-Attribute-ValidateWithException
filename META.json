@@ -37,7 +37,7 @@
       },
       "runtime" : {
          "requires" : {
-            "Moose" : 0,
+            "Moose" : "2.0200",
             "Moose::Exporter" : 0,
             "Moose::Role" : 0,
             "Throwable::Error" : 0
@@ -83,9 +83,9 @@
          "Dist::Zilla::PluginBundle::Author::KENTNL::Lite" : "1.0.6",
          "File::Temp" : "0.22",
          "Module::Build" : "0.38",
-         "Moose" : "2.02",
-         "Moose::Exporter" : "2.0200",
-         "Moose::Role" : "2.0200",
+         "Moose" : "2.0201",
+         "Moose::Exporter" : "2.0201",
+         "Moose::Role" : "2.0201",
          "Test::Fatal" : "0.006",
          "Test::More" : "0.98",
          "Throwable::Error" : "0.102080"
@@ -100,7 +100,7 @@
          ]
       },
       "platform" : "linux",
-      "uname" : "Linux 2.6.39-gentoo-r3 x86_64 GenuineIntel GNU/Linux"
+      "uname" : "Linux 3.0.0-gentoo x86_64 GenuineIntel GNU/Linux"
    },
    "x_Dist_Zilla" : {
       "plugins" : [

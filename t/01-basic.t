@@ -27,9 +27,9 @@ my $e = exception {
 
 isa_ok( $e, 'MooseX::Attribute::ValidateWithException::Exception' );
 
-#note explain $e;
+note explain $e;
 
-#note "$e";
+note "$e";
 
 done_testing;
 
