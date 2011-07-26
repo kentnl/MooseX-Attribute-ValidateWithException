@@ -1,6 +1,15 @@
 Release history for MooseX-Attribute-ValidateWithException
 
 {{$NEXT}}
+ [Bugfix]
+ - Fix compatibility with Moose 2.020???
+
+ [Dependencies]
+ - Moose 2.0200 is the minimum Moose version now.
+
+ [Packaging]
+ - Bumping minor version due to dependency changes being not reverse
+   compatible.
 
 0.1.1 2011-06-18T02:24:30Z
  [Bugfix]
