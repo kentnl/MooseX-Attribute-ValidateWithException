@@ -3,7 +3,10 @@ use warnings;
 
 package MooseX::Attribute::ValidateWithException;
 BEGIN {
-  $MooseX::Attribute::ValidateWithException::VERSION = '0.2.0';
+  $MooseX::Attribute::ValidateWithException::AUTHORITY = 'cpan:KENTNL';
+}
+{
+  $MooseX::Attribute::ValidateWithException::VERSION = '0.2.1';
 }
 
 # ABSTRACT: Cause validation failures to throw exception objects.
@@ -27,7 +30,7 @@ MooseX::Attribute::ValidateWithException - Cause validation failures to throw ex
 
 =head1 VERSION
 
-version 0.2.0
+version 0.2.1
 
 =head1 SYNOPSIS
 
@@ -94,7 +97,7 @@ Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2011 by Kent Fredric <kentnl@cpan.org>.
+This software is copyright (c) 2012 by Kent Fredric <kentnl@cpan.org>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

@@ -4,15 +4,18 @@ use warnings;
 
 package MooseX::Attribute::ValidateWithException::AttributeRole;
 BEGIN {
-  $MooseX::Attribute::ValidateWithException::AttributeRole::VERSION = '0.2.0';
+  $MooseX::Attribute::ValidateWithException::AttributeRole::AUTHORITY = 'cpan:KENTNL';
+}
+{
+  $MooseX::Attribute::ValidateWithException::AttributeRole::VERSION = '0.2.1';
 }
 use Moose::Role;
 
 sub __generate_exception {
-  my ( $self, %params ) = @_ ;
+  my ( $self, %params ) = @_;
   return 'require MooseX::Attribute::ValidateWithException::Exception; ' .
 
-  $self->_inline_throw_error(<<"EXCEPTION");
+    $self->_inline_throw_error(<<"EXCEPTION");
 
   MooseX::Attribute::ValidateWithException::Exception->new(
     attribute_name     => $params{attribute_name},
@@ -25,17 +28,18 @@ EXCEPTION
 }
 
 sub __generate_check {
-  my ( $self, %params ) = @_ ;
+  my ( $self, %params ) = @_;
   if ( $self->type_constraint->can_be_inlined ) {
     ## no critic (ProtectPrivateSubs)
     return '! ( ' . $self->type_constraint->_inline_check( $params{value} ) . ')';
-  } else {
+  }
+  else {
     return '! ( ' . $params{tc} . '->(' . $params{value} . ') )';
   }
 }
 
 sub __generate_check_exception {
-  my ( $self, %params ) = @_ ;
+  my ( $self, %params ) = @_;
   return <<"CHECKCODE";
   if( $params{check} ) {
     my $params{message_variable} = $params{get_message};
@@ -58,7 +62,7 @@ override '_inline_check_constraint' => sub {
 
   return unless $self->has_type_constraint;
 
-  my $tc_obj = $self->type_constraint;
+  my $tc_obj  = $self->type_constraint;
   my $tc_name = quotemeta( $tc_obj->name );
 
   ## no critic ( ProhibitImplicitNewlines RequireInterpolationOfMetachars )
@@ -66,14 +70,14 @@ override '_inline_check_constraint' => sub {
   return $self->__generate_check_exception(
     check => $self->__generate_check(
       value => $value,
-      tc => $tc,
+      tc    => $tc,
     ),
     message_variable => '$message',
-    get_message => "do { local \$_ = ${value}; ${message}->( ${value} ) }",
-    ref_handler => $self->_inline_throw_error('$message'),
-    nonref_handler => $self->__generate_exception(
-      attribute_name => "'$attribute_name'",
-      data           => $value,
+    get_message      => "do { local \$_ = ${value}; ${message}->( ${value} ) }",
+    ref_handler      => $self->_inline_throw_error('$message'),
+    nonref_handler   => $self->__generate_exception(
+      attribute_name     => "'$attribute_name'",
+      data               => $value,
       constraint_message => '$message',
       constraint_name    => "'$tc_name'",
     ),
@@ -121,7 +125,7 @@ MooseX::Attribute::ValidateWithException::AttributeRole
 
 =head1 VERSION
 
-version 0.2.0
+version 0.2.1
 
 =head1 AUTHOR
 
@@ -129,7 +133,7 @@ Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2011 by Kent Fredric <kentnl@cpan.org>.
+This software is copyright (c) 2012 by Kent Fredric <kentnl@cpan.org>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

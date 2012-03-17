@@ -6,34 +6,36 @@ use Module::Build 0.3601;
 
 
 my %module_build_args = (
-  'build_requires' => {
-    'English' => '0',
-    'File::Find' => '0',
-    'File::Temp' => '0',
-    'Module::Build' => '0.3601',
-    'Test::Fatal' => '0',
-    'Test::More' => '0.88'
+  "build_requires" => {
+    "File::Find" => 0,
+    "File::Temp" => 0,
+    "Module::Build" => "0.3601",
+    "Test::Fatal" => 0,
+    "Test::More" => "0.88"
   },
-  'configure_requires' => {
-    'Module::Build' => '0.3601'
+  "configure_requires" => {
+    "Module::Build" => "0.3601"
   },
-  'dist_abstract' => 'Cause validation failures to throw exception objects.',
-  'dist_author' => [
-    'Kent Fredric <kentnl@cpan.org>'
+  "dist_abstract" => "Cause validation failures to throw exception objects.",
+  "dist_author" => [
+    "Kent Fredric <kentnl\@cpan.org>"
   ],
-  'dist_name' => 'MooseX-Attribute-ValidateWithException',
-  'dist_version' => '0.2.0',
-  'license' => 'perl',
-  'module_name' => 'MooseX::Attribute::ValidateWithException',
-  'recommends' => {},
-  'recursive_test_files' => 1,
-  'requires' => {
-    'Moose' => '2.0200',
-    'Moose::Exporter' => '0',
-    'Moose::Role' => '0',
-    'Throwable::Error' => '0'
+  "dist_name" => "MooseX-Attribute-ValidateWithException",
+  "dist_version" => "0.2.1",
+  "license" => "perl",
+  "module_name" => "MooseX::Attribute::ValidateWithException",
+  "recommends" => {},
+  "recursive_test_files" => 1,
+  "requires" => {
+    "Moose" => "2.0200",
+    "Moose::Exporter" => 0,
+    "Moose::Role" => 0,
+    "Throwable::Error" => 0,
+    "perl" => "5.006",
+    "strict" => 0,
+    "warnings" => 0
   },
-  'script_files' => []
+  "script_files" => []
 );
 
 
