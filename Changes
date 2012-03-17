@@ -12,10 +12,10 @@
  - runtime requires : perl
 
  [Dependencies::Removed]
- - test requires : English 
+ - test requires : English
 
  [Internals]
- - Version declaration moved out of BEGIN 
+ - Version declaration moved out of BEGIN
  - All namespaces declare $AUTHORITY
 
  [Packaging]
