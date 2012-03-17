@@ -1,6 +1,6 @@
 ﻿Release history for MooseX-Attribute-ValidateWithException
 
-0.2.1 2012-03-17T04:46:48Z
+0.2.1 2012-03-17T04:48:45Z
 
  [Dependencies::Changed]
  - develop recommends : Dist::Zilla::PluginBundle::Author::KENTNL::Lite 0.01009803 -> v1.3.0
@@ -12,10 +12,10 @@
  - runtime requires : perl
 
  [Dependencies::Removed]
- - test requires : English 
+ - test requires : English
 
  [Internals]
- - Version declaration moved out of BEGIN 
+ - Version declaration moved out of BEGIN
  - All namespaces declare $AUTHORITY
 
  [Packaging]
