@@ -4,7 +4,10 @@ use warnings;
 
 package MooseX::Attribute::ValidateWithException::AttributeRole;
 BEGIN {
-  $MooseX::Attribute::ValidateWithException::AttributeRole::VERSION = '0.2.0';
+  $MooseX::Attribute::ValidateWithException::AttributeRole::AUTHORITY = 'cpan:KENTNL';
+}
+{
+  $MooseX::Attribute::ValidateWithException::AttributeRole::VERSION = '0.2.1';
 }
 use Moose::Role;
 
@@ -121,7 +124,7 @@ MooseX::Attribute::ValidateWithException::AttributeRole
 
 =head1 VERSION
 
-version 0.2.0
+version 0.2.1
 
 =head1 AUTHOR
 
@@ -129,7 +132,7 @@ Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2011 by Kent Fredric <kentnl@cpan.org>.
+This software is copyright (c) 2012 by Kent Fredric <kentnl@cpan.org>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
