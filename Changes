@@ -1,6 +1,8 @@
 ﻿Release history for MooseX-Attribute-ValidateWithException
 
 {{$NEXT}}
+
+0.2.1 2012-03-17T04:49:40Z
  - Minor maintenance release
 
  [Dependencies::Changed]
