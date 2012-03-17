@@ -31,7 +31,7 @@ my %module_build_args = (
     "Moose::Exporter" => 0,
     "Moose::Role" => 0,
     "Throwable::Error" => 0,
-    "perl" => "v5.10.0",
+    "perl" => "5.006",
     "strict" => 0,
     "warnings" => 0
   },
