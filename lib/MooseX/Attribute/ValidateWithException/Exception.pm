@@ -29,6 +29,7 @@ has 'data' => (
 );
 
 has 'constraint_message' => (
+  isa      => 'Defined',
   is       => 'ro',
   required => 1,
 );
