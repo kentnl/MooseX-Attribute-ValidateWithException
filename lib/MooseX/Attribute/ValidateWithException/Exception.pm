@@ -41,6 +41,7 @@ has 'constraint_name' => (
 has message => (
   isa     => 'Str',
   is      => 'ro',
+  lazy    => 1,
   builder => '_generate_message',
 );
 
