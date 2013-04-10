@@ -7,7 +7,7 @@ BEGIN {
   $MooseX::Attribute::ValidateWithException::AttributeRole::AUTHORITY = 'cpan:KENTNL';
 }
 {
-  $MooseX::Attribute::ValidateWithException::AttributeRole::VERSION = '0.2.1';
+  $MooseX::Attribute::ValidateWithException::AttributeRole::VERSION = '0.2.2';
 }
 use Moose::Role;
 
@@ -31,10 +31,10 @@ sub __generate_check {
   my ( $self, %params ) = @_;
   if ( $self->type_constraint->can_be_inlined ) {
     ## no critic (ProtectPrivateSubs)
-    return '! ( ' . $self->type_constraint->_inline_check( $params{value} ) . ')';
+    return sprintf '! ( %s )', $self->type_constraint->_inline_check( $params{value} );
   }
   else {
-    return '! ( ' . $params{tc} . '->(' . $params{value} . ') )';
+    return sprintf '! ( %s->( %s ) )', $params{tc}, $params{value};
   }
 }
 
@@ -73,7 +73,7 @@ override '_inline_check_constraint' => sub {
       tc    => $tc,
     ),
     message_variable => '$message',
-    get_message      => "do { local \$_ = ${value}; ${message}->( ${value} ) }",
+    get_message      => ( sprintf 'do { local $_ = %s; %s->( %s ) }', $value, $message, $value ),
     ref_handler      => $self->_inline_throw_error('$message'),
     nonref_handler   => $self->__generate_exception(
       attribute_name     => "'$attribute_name'",
@@ -117,6 +117,7 @@ no Moose::Role;
 1;
 
 __END__
+
 =pod
 
 =head1 NAME
@@ -125,7 +126,7 @@ MooseX::Attribute::ValidateWithException::AttributeRole
 
 =head1 VERSION
 
-version 0.2.1
+version 0.2.2
 
 =head1 AUTHOR
 
@@ -133,10 +134,9 @@ Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2012 by Kent Fredric <kentnl@cpan.org>.
+This software is copyright (c) 2013 by Kent Fredric <kentnl@cpan.org>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-

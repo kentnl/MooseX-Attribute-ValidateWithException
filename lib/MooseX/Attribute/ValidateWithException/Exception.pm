@@ -6,7 +6,7 @@ BEGIN {
   $MooseX::Attribute::ValidateWithException::Exception::AUTHORITY = 'cpan:KENTNL';
 }
 {
-  $MooseX::Attribute::ValidateWithException::Exception::VERSION = '0.2.1';
+  $MooseX::Attribute::ValidateWithException::Exception::VERSION = '0.2.2';
 }
 
 # ABSTRACT: An Exception object to represent "Normal" moose validation failures.
@@ -47,12 +47,13 @@ has 'constraint_name' => (
 has message => (
   isa     => 'Str',
   is      => 'ro',
+  lazy    => 1,
   builder => '_generate_message',
 );
 
 sub _generate_message {
   my ($self) = shift;
-  return 'Attribute (' . $self->attribute_name . ') does not pass the type constraint because: ' . $self->constraint_message;
+  return sprintf 'Attribute (%s) does not pass the type constraint because: %s', $self->attribute_name, $self->constraint_message;
 }
 
 #with 'StackTrace::Auto';
@@ -61,8 +62,8 @@ __PACKAGE__->meta->make_immutable( inline_constructor => 0 );
 no Moose;
 1;
 
-
 __END__
+
 =pod
 
 =head1 NAME
@@ -71,7 +72,7 @@ MooseX::Attribute::ValidateWithException::Exception - An Exception object to rep
 
 =head1 VERSION
 
-version 0.2.1
+version 0.2.2
 
 =head1 AUTHOR
 
@@ -79,10 +80,9 @@ Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2012 by Kent Fredric <kentnl@cpan.org>.
+This software is copyright (c) 2013 by Kent Fredric <kentnl@cpan.org>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
