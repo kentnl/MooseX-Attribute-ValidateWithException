@@ -1,6 +1,6 @@
 ﻿Release history for MooseX-Attribute-ValidateWithException
 
-0.2.2 2013-04-10T07:05:48Z
+0.2.2 2013-04-10T07:19:17Z
  - Maint release
 
  [Dependencies::Added / develop requires]
@@ -25,6 +25,9 @@
  [Documentation]
  - Update copyright year.
  - add README.mkdn
+
+ [Internals]
+ - fix a warning about a value being undefined by making it lazy
 
  [Meta]
  - Bug tracker to github issues

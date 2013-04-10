@@ -31,10 +31,10 @@ sub __generate_check {
   my ( $self, %params ) = @_;
   if ( $self->type_constraint->can_be_inlined ) {
     ## no critic (ProtectPrivateSubs)
-    return '! ( ' . $self->type_constraint->_inline_check( $params{value} ) . ')';
+    return sprintf '! ( %s )', $self->type_constraint->_inline_check( $params{value} );
   }
   else {
-    return '! ( ' . $params{tc} . '->(' . $params{value} . ') )';
+    return sprintf '! ( %s->( %s ) )', $params{tc}, $params{value};
   }
 }
 
@@ -73,7 +73,7 @@ override '_inline_check_constraint' => sub {
       tc    => $tc,
     ),
     message_variable => '$message',
-    get_message      => "do { local \$_ = ${value}; ${message}->( ${value} ) }",
+    get_message      => ( sprintf 'do { local $_ = %s; %s->( %s ) }', $value, $message, $value ),
     ref_handler      => $self->_inline_throw_error('$message'),
     nonref_handler   => $self->__generate_exception(
       attribute_name     => "'$attribute_name'",

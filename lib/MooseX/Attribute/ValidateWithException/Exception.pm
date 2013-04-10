@@ -29,7 +29,6 @@ has 'data' => (
 );
 
 has 'constraint_message' => (
-  isa      => 'Str',
   is       => 'ro',
   required => 1,
 );
@@ -48,12 +47,13 @@ has 'constraint_name' => (
 has message => (
   isa     => 'Str',
   is      => 'ro',
+  lazy    => 1,
   builder => '_generate_message',
 );
 
 sub _generate_message {
   my ($self) = shift;
-  return 'Attribute (' . $self->attribute_name . ') does not pass the type constraint because: ' . $self->constraint_message;
+  return sprintf 'Attribute (%s) does not pass the type constraint because: %s', $self->attribute_name, $self->constraint_message;
 }
 
 #with 'StackTrace::Auto';
