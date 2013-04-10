@@ -7,7 +7,7 @@ BEGIN {
   $MooseX::Attribute::ValidateWithException::AttributeRole::AUTHORITY = 'cpan:KENTNL';
 }
 {
-  $MooseX::Attribute::ValidateWithException::AttributeRole::VERSION = '0.2.1';
+  $MooseX::Attribute::ValidateWithException::AttributeRole::VERSION = '0.2.2';
 }
 use Moose::Role;
 
@@ -117,6 +117,7 @@ no Moose::Role;
 1;
 
 __END__
+
 =pod
 
 =head1 NAME
@@ -125,7 +126,7 @@ MooseX::Attribute::ValidateWithException::AttributeRole
 
 =head1 VERSION
 
-version 0.2.1
+version 0.2.2
 
 =head1 AUTHOR
 
@@ -133,10 +134,9 @@ Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2012 by Kent Fredric <kentnl@cpan.org>.
+This software is copyright (c) 2013 by Kent Fredric <kentnl@cpan.org>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
