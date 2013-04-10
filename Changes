@@ -26,6 +26,9 @@
  - Update copyright year.
  - add README.mkdn
 
+ [Internals]
+ - fix a warning about a value being undefined by making it lazy
+
  [Meta]
  - Bug tracker to github issues
 
