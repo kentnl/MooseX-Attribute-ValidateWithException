@@ -4,7 +4,7 @@ MooseX::Attribute::ValidateWithException - Cause validation failures to throw ex
 
 # VERSION
 
-version 0.2.2
+version 0.2.3
 
 # SYNOPSIS
 
