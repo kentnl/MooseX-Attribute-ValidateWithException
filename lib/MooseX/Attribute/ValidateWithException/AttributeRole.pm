@@ -7,17 +7,13 @@ use Moose::Role;
 
 sub __generate_exception {
   my ( $self, %params ) = @_;
-  return 'require MooseX::Attribute::ValidateWithException::Exception; ' .
-
-    $self->_inline_throw_error(<<"EXCEPTION");
-
-  MooseX::Attribute::ValidateWithException::Exception->new(
+  return 'require MooseX::Attribute::ValidateWithException::Exception;' . <<EXCEPTION
+  die MooseX::Attribute::ValidateWithException::Exception->new(
     attribute_name     => $params{attribute_name},
     data               => $params{data},
     constraint_message => $params{constraint_message},
     constraint_name    => $params{constraint_name},
   )
-
 EXCEPTION
 }
 
