@@ -7,7 +7,7 @@ BEGIN {
   $MooseX::Attribute::ValidateWithException::AttributeRole::AUTHORITY = 'cpan:KENTNL';
 }
 {
-  $MooseX::Attribute::ValidateWithException::AttributeRole::VERSION = '0.3.0'; # TRIAL
+  $MooseX::Attribute::ValidateWithException::AttributeRole::VERSION = '0.2.3';
 }
 use Moose::Role;
 
@@ -93,13 +93,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 MooseX::Attribute::ValidateWithException::AttributeRole
 
 =head1 VERSION
 
-version 0.3.0
+version 0.2.3
 
 =head1 AUTHOR
 

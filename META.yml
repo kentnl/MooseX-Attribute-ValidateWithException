@@ -18,13 +18,13 @@ name: MooseX-Attribute-ValidateWithException
 provides:
   MooseX::Attribute::ValidateWithException:
     file: lib/MooseX/Attribute/ValidateWithException.pm
-    version: v0.3.0
+    version: v0.2.3
   MooseX::Attribute::ValidateWithException::AttributeRole:
     file: lib/MooseX/Attribute/ValidateWithException/AttributeRole.pm
-    version: v0.3.0
+    version: v0.2.3
   MooseX::Attribute::ValidateWithException::Exception:
     file: lib/MooseX/Attribute/ValidateWithException/Exception.pm
-    version: v0.3.0
+    version: v0.2.3
 requires:
   Moose: 2.1100
   Moose::Exporter: 0
@@ -37,7 +37,7 @@ resources:
   bugtracker: https://github.com/kentfredric/MooseX-Attribute-ValidateWithException/issues
   homepage: https://github.com/kentfredric/MooseX-Attribute-ValidateWithException
   repository: https://github.com/kentfredric/MooseX-Attribute-ValidateWithException.git
-version: 0.3.0
+version: 0.2.3
 x_BuiltWith:
   modules:
     Dist::Zilla::Plugin::Author::KENTNL::MinimumPerl: 2.004001
@@ -258,6 +258,10 @@ x_Dist_Zilla:
             -
               class: Pod::Weaver::Plugin::H1Nester
               name: '@CorePrep/H1Nester'
+              version: 4.004
+            -
+              class: Pod::Weaver::Plugin::SingleEncoding
+              name: '-SingleEncoding'
               version: 4.004
             -
               class: Pod::Weaver::Section::Name
@@ -484,6 +488,6 @@ x_Dist_Zilla:
   zilla:
     class: Dist::Zilla::Dist::Builder
     config:
-      is_trial: 1
+      is_trial: 0
     version: 5.006
 x_authority: cpan:KENTNL
