@@ -6,7 +6,7 @@ BEGIN {
   $MooseX::Attribute::ValidateWithException::AUTHORITY = 'cpan:KENTNL';
 }
 {
-  $MooseX::Attribute::ValidateWithException::VERSION = '0.2.2';
+  $MooseX::Attribute::ValidateWithException::VERSION = '0.3.0'; # TRIAL
 }
 
 # ABSTRACT: Cause validation failures to throw exception objects.
@@ -25,13 +25,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 MooseX::Attribute::ValidateWithException - Cause validation failures to throw exception objects.
 
 =head1 VERSION
 
-version 0.2.2
+version 0.3.0
 
 =head1 SYNOPSIS
 

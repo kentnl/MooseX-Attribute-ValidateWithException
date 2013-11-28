@@ -1,26 +1,37 @@
 ﻿Release history for MooseX-Attribute-ValidateWithException
 
+0.3.0 2013-11-28T16:41:47Z
+ [00 Major]
+ - Refactored to work better with Moose 2.1100
+ - Code is now mostly a compatibility shim, because Moose has exceptions
+   default
+
+ [Dependencies::Noteworthy]
+ - now requires Moose >2.1100
+ - now requires Module::Build 0.4203
+ - now requires Test::More 1.001002
+
+ [Dependencies::Stats]
+ - Dependencies changed, see Changes.deps{,.all,.dev} for details
+ - build: ↑1
+ - configure: ↑1
+ - develop: +46 -3
+ - runtime: ↑1
+ - test: ↑1 -2
+
 0.2.2 2013-04-10T07:27:10Z
  - Maint release
 
- [Dependencies::Added / develop requires]
- - Pod::Coverage::TrustPod
- - Test::CPAN::Meta
- - Test::Pod 1.41
- - Test::Pod::Coverage 1.08
- - version 0.9901
+ [Dependencies::Noteworthy]
+ - use Module::Build 0.4004
+ - use Test::More 0.98
 
- [Dependencies::Changed / build requires]
- - Module::Build 0.3601 → 0.4004
-
- [Dependencies::Changed / configure requires]
- - Module::Build 0.3601 → 0.4004
-
- [Dependencies::Changed / develop suggests]
- - Dist::Zilla::PluginBundle::Author::KENTNL v1.3.0 → v1.7.2
-
- [Dependencies::Changed / test requires]
- - Test::More 0.88 → 0.98
+ [Dependencies::Stats]
+ - Dependencies changed, see Changes.deps{,.all,.dev} for details
+ - build: ↑1
+ - configure: ↑1
+ - develop: +5 ↑1
+ - test: ↑1
 
  [Documentation]
  - Update copyright year.
@@ -38,19 +49,11 @@
 0.2.1 2012-03-17T04:49:40Z
  - Minor maintenance release
 
- [Dependencies::Added / runtime requires]
- - perl 5.006
- - strict
- - warnings
-
- [Dependencies::Changed / develop recommends]
- - Dist::Zilla::PluginBundle::Author::KENTNL::Lite 0.01009803 → v1.3.0
-
- [Dependencies::Changed / develop suggests]
- - Dist::Zilla::PluginBundle::Author::KENTNL v1.0.0 → v1.3.0
-
- [Dependencies::Removed / test requires]
- - English
+ [Dependencies::Stats]
+ - Dependencies changed, see Changes.deps{,.all,.dev} for details
+ - develop: ↑2
+ - runtime: +3
+ - test: -1
 
  [Internals]
  - Version declaration moved out of BEGIN
@@ -67,8 +70,12 @@
    https://rt.cpan.org/Public/Bug/Display.html?id=69461 ), thanks ANDK for
    reporting.
 
- [Dependencies::Changed / runtime requires]
- - Moose 0 → 2.0200
+ [Dependencies::Noteworthy]
+ - upgrade to Moose 2.0200
+
+ [Dependencies::Stats]
+ - Dependencies changed, see Changes.deps{,.all,.dev} for details
+ - runtime: ↑1
 
  [Packaging]
  - Bumping minor version due to dependency changes being not reverse

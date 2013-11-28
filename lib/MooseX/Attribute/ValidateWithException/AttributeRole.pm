@@ -7,49 +7,19 @@ BEGIN {
   $MooseX::Attribute::ValidateWithException::AttributeRole::AUTHORITY = 'cpan:KENTNL';
 }
 {
-  $MooseX::Attribute::ValidateWithException::AttributeRole::VERSION = '0.2.2';
+  $MooseX::Attribute::ValidateWithException::AttributeRole::VERSION = '0.3.0'; # TRIAL
 }
 use Moose::Role;
-
-sub __generate_exception {
-  my ( $self, %params ) = @_;
-  return 'require MooseX::Attribute::ValidateWithException::Exception; ' .
-
-    $self->_inline_throw_error(<<"EXCEPTION");
-
-  MooseX::Attribute::ValidateWithException::Exception->new(
-    attribute_name     => $params{attribute_name},
-    data               => $params{data},
-    constraint_message => $params{constraint_message},
-    constraint_name    => $params{constraint_name},
-  )
-
-EXCEPTION
-}
 
 sub __generate_check {
   my ( $self, %params ) = @_;
   if ( $self->type_constraint->can_be_inlined ) {
     ## no critic (ProtectPrivateSubs)
-    return sprintf '! ( %s )', $self->type_constraint->_inline_check( $params{value} );
+    return sprintf '( %s )', $self->type_constraint->_inline_check( $params{value} );
   }
   else {
-    return sprintf '! ( %s->( %s ) )', $params{tc}, $params{value};
+    return sprintf '( %s->( %s ) )', $params{tc}, $params{value};
   }
-}
-
-sub __generate_check_exception {
-  my ( $self, %params ) = @_;
-  return <<"CHECKCODE";
-  if( $params{check} ) {
-    my $params{message_variable} = $params{get_message};
-    if ( ref $params{message_variable} ) {
-      $params{ref_handler}
-    } else {
-      $params{nonref_handler}
-    }
-  }
-CHECKCODE
 }
 
 override '_inline_check_constraint' => sub {
@@ -67,21 +37,26 @@ override '_inline_check_constraint' => sub {
 
   ## no critic ( ProhibitImplicitNewlines RequireInterpolationOfMetachars )
 
-  return $self->__generate_check_exception(
-    check => $self->__generate_check(
-      value => $value,
-      tc    => $tc,
-    ),
-    message_variable => '$message',
-    get_message      => ( sprintf 'do { local $_ = %s; %s->( %s ) }', $value, $message, $value ),
-    ref_handler      => $self->_inline_throw_error('$message'),
-    nonref_handler   => $self->__generate_exception(
-      attribute_name     => "'$attribute_name'",
-      data               => $value,
-      constraint_message => '$message',
-      constraint_name    => "'$tc_name'",
-    ),
-  );
+  my $check_code       = $self->__generate_check( value => $value, tc => $tc, );
+  my $message_variable = '$message';
+  my $get_message_code = ( sprintf 'do { local $_ = %s; %s->( %s ) }', $value, $message, $value );
+
+  return <<"CHECKCODE";
+  if( ! $check_code ) {
+    my $message_variable = $get_message_code;
+    if ( ref $message_variable ) {
+      die $message_variable;
+    } else {
+      require MooseX::Attribute::ValidateWithException::Exception;
+      die MooseX::Attribute::ValidateWithException::Exception->new(
+        attribute_name     => '$attribute_name',
+        data               => $value,
+        constraint_message => $message_variable,
+        constraint_name    => '$tc_name',
+      );
+    }
+  }
+CHECKCODE
 };
 
 override 'verify_against_type_constraint' => sub {
@@ -95,18 +70,16 @@ override 'verify_against_type_constraint' => sub {
   if ( not $type_constraint->check($val) ) {
     my $message = $type_constraint->get_message($val);
     if ( ref $message ) {
-      $self->throw_error($message);
+      die $message;
     }
     else {
       require MooseX::Attribute::ValidateWithException::Exception;
-      $self->throw_error(
-        MooseX::Attribute::ValidateWithException::Exception->new(
-          attribute_name     => $self->name,
-          data               => $val,
-          constraint_message => $message,
-          constraint         => $type_constraint,
-          constraint_name    => $type_constraint->name
-        )
+      die MooseX::Attribute::ValidateWithException::Exception->new(
+        attribute_name     => $self->name,
+        data               => $val,
+        constraint_message => $message,
+        constraint         => $type_constraint,
+        constraint_name    => $type_constraint->name
       );
     }
   }
@@ -120,13 +93,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 MooseX::Attribute::ValidateWithException::AttributeRole
 
 =head1 VERSION
 
-version 0.2.2
+version 0.3.0
 
 =head1 AUTHOR
 

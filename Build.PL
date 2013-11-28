@@ -7,23 +7,23 @@ use Module::Build 0.3601;
 
 my %module_build_args = (
   "build_requires" => {
-    "Module::Build" => "0.4004"
+    "Module::Build" => "0.4203"
   },
   "configure_requires" => {
-    "Module::Build" => "0.4004"
+    "Module::Build" => "0.4203"
   },
   "dist_abstract" => "Cause validation failures to throw exception objects.",
   "dist_author" => [
     "Kent Fredric <kentnl\@cpan.org>"
   ],
   "dist_name" => "MooseX-Attribute-ValidateWithException",
-  "dist_version" => "0.2.2",
+  "dist_version" => "0.3.0",
   "license" => "perl",
   "module_name" => "MooseX::Attribute::ValidateWithException",
   "recommends" => {},
   "recursive_test_files" => 1,
   "requires" => {
-    "Moose" => "2.0200",
+    "Moose" => "2.1100",
     "Moose::Exporter" => 0,
     "Moose::Role" => 0,
     "Throwable::Error" => 0,
@@ -33,25 +33,22 @@ my %module_build_args = (
   },
   "script_files" => [],
   "test_requires" => {
-    "File::Find" => 0,
-    "File::Temp" => 0,
     "Test::Fatal" => 0,
-    "Test::More" => "0.98"
+    "Test::More" => "1.001002"
   }
 );
 
 
+my %fallback_build_requires = (
+  "Module::Build" => "0.4203",
+  "Test::Fatal" => 0,
+  "Test::More" => "1.001002"
+);
+
+
 unless ( eval { Module::Build->VERSION(0.4004) } ) {
-  my $tr = delete $module_build_args{test_requires};
-  my $br = $module_build_args{build_requires};
-  for my $mod ( keys %$tr ) {
-    if ( exists $br->{$mod} ) {
-      $br->{$mod} = $tr->{$mod} if $tr->{$mod} > $br->{$mod};
-    }
-    else {
-      $br->{$mod} = $tr->{$mod};
-    }
-  }
+  delete $module_build_args{test_requires};
+  $module_build_args{build_requires} = \%fallback_build_requires;
 }
 
 my $build = Module::Build->new(%module_build_args);
