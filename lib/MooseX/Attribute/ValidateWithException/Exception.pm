@@ -6,7 +6,7 @@ BEGIN {
   $MooseX::Attribute::ValidateWithException::Exception::AUTHORITY = 'cpan:KENTNL';
 }
 {
-  $MooseX::Attribute::ValidateWithException::Exception::VERSION = '0.2.3';
+  $MooseX::Attribute::ValidateWithException::Exception::VERSION = '0.3.0'; # TRIAL
 }
 
 # ABSTRACT: An Exception object to represent "Normal" moose validation failures.
@@ -72,7 +72,7 @@ MooseX::Attribute::ValidateWithException::Exception - An Exception object to rep
 
 =head1 VERSION
 
-version 0.2.3
+version 0.3.0
 
 =head1 AUTHOR
 
