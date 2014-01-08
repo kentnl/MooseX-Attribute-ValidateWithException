@@ -1,6 +1,8 @@
 ﻿Release history for MooseX-Attribute-ValidateWithException
 
 {{$NEXT}}
+
+0.3.1 2014-01-08T04:40:40Z
  [00 Minor]
  - Functionally the same as 0.3.0 with -TRIAL removed.
  - Minor docs improvements.
