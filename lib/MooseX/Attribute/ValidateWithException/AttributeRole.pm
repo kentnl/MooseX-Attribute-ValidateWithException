@@ -3,6 +3,9 @@ use strict;
 use warnings;
 
 package MooseX::Attribute::ValidateWithException::AttributeRole;
+
+# ABSTRACT: Role to apply attribute properties to an attribute.
+
 use Moose::Role qw( override );
 
 sub __generate_check {
