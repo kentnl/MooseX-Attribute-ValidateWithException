@@ -24,7 +24,6 @@ sub __generate_check {
 
 override '_inline_check_constraint' => sub {
 
-  #    my $orig = shift;
   my $self = shift;
   my ( $value, $tc, $message, $is_lazy ) = @_;
 
