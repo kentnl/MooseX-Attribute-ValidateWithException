@@ -49,7 +49,7 @@ sub pmver {
 }
 
 eval { $v .= pmver('Module::Build','0.4203') };
-eval { $v .= pmver('Moose','2.1100') };
+eval { $v .= pmver('Moose','2.1200') };
 eval { $v .= pmver('Moose::Exporter','any version') };
 eval { $v .= pmver('Moose::Role','any version') };
 eval { $v .= pmver('Test::Fatal','any version') };

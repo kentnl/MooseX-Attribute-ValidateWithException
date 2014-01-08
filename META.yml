@@ -26,7 +26,7 @@ provides:
     file: lib/MooseX/Attribute/ValidateWithException/Exception.pm
     version: v0.3.1
 requires:
-  Moose: 2.1100
+  Moose: 2.1200
   Moose::Exporter: 0
   Moose::Role: 0
   Throwable::Error: 0
