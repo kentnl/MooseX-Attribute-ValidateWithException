@@ -1,5 +1,16 @@
 ﻿Release history for MooseX-Attribute-ValidateWithException
 
+0.3.1 2014-01-08T04:40:40Z
+ [00 Minor]
+ - Functionally the same as 0.3.0 with -TRIAL removed.
+ - Minor docs improvements.
+
+ [Dependencies::Stats]
+ - Dependencies changed since 0.3.0, see Changes.deps{,.all,.dev} for
+   details
+ - develop: +3 ↑1 -4
+ - runtime: ↑1
+
 0.3.0 2013-11-28T16:41:47Z
  [00 Major]
  - Refactored to work better with Moose 2.1100
@@ -12,7 +23,8 @@
  - now requires Test::More 1.001002
 
  [Dependencies::Stats]
- - Dependencies changed, see Changes.deps{,.all,.dev} for details
+ - Dependencies changed since 0.2.2, see Changes.deps{,.all,.dev} for
+   details
  - build: ↑1
  - configure: ↑1
  - develop: +46 -3
@@ -27,7 +39,8 @@
  - use Test::More 0.98
 
  [Dependencies::Stats]
- - Dependencies changed, see Changes.deps{,.all,.dev} for details
+ - Dependencies changed since 0.2.1, see Changes.deps{,.all,.dev} for
+   details
  - build: ↑1
  - configure: ↑1
  - develop: +5 ↑1
@@ -50,7 +63,8 @@
  - Minor maintenance release
 
  [Dependencies::Stats]
- - Dependencies changed, see Changes.deps{,.all,.dev} for details
+ - Dependencies changed since 0.2.0, see Changes.deps{,.all,.dev} for
+   details
  - develop: ↑2
  - runtime: +3
  - test: -1
@@ -74,7 +88,8 @@
  - upgrade to Moose 2.0200
 
  [Dependencies::Stats]
- - Dependencies changed, see Changes.deps{,.all,.dev} for details
+ - Dependencies changed since 0.1.1, see Changes.deps{,.all,.dev} for
+   details
  - runtime: ↑1
 
  [Packaging]
