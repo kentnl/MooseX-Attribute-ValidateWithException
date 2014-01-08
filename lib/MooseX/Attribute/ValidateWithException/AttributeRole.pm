@@ -32,7 +32,7 @@ override '_inline_check_constraint' => sub {
 
   my $check_code       = $self->__generate_check( value => $value, tc => $tc, );
   my $message_variable = '$message';
-  my $get_message_code = ( sprintf 'do { local $_ = %s; %s->( %s ) }', $value, $message, $value );
+  my $get_message_code = ( sprintf 'do { local $_ = %s; %s->( %s ) }', $value, $message, $value, );
 
   return <<"CHECKCODE";
   if( ! $check_code ) {
@@ -72,7 +72,7 @@ override 'verify_against_type_constraint' => sub {
         data               => $val,
         constraint_message => $message,
         constraint         => $type_constraint,
-        constraint_name    => $type_constraint->name
+        constraint_name    => $type_constraint->name,
       );
     }
   }
