@@ -1,3 +1,4 @@
+use 5.006; # warnings
 use strict;
 use warnings;
 
@@ -11,7 +12,7 @@ BEGIN {
 
 # ABSTRACT: An Exception object to represent "Normal" moose validation failures.
 
-use Moose;
+use Moose qw( extends has );
 
 #with 'StackTrace::Auto';
 

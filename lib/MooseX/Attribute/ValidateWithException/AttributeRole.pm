@@ -1,4 +1,4 @@
-
+use 5.006; # warnings
 use strict;
 use warnings;
 
@@ -9,7 +9,7 @@ BEGIN {
 {
   $MooseX::Attribute::ValidateWithException::AttributeRole::VERSION = '0.3.1';
 }
-use Moose::Role;
+use Moose::Role qw( override );
 
 sub __generate_check {
   my ( $self, %params ) = @_;
@@ -39,7 +39,7 @@ override '_inline_check_constraint' => sub {
 
   my $check_code       = $self->__generate_check( value => $value, tc => $tc, );
   my $message_variable = '$message';
-  my $get_message_code = ( sprintf 'do { local $_ = %s; %s->( %s ) }', $value, $message, $value );
+  my $get_message_code = ( sprintf 'do { local $_ = %s; %s->( %s ) }', $value, $message, $value, );
 
   return <<"CHECKCODE";
   if( ! $check_code ) {
