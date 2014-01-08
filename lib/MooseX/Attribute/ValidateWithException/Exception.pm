@@ -6,7 +6,7 @@ package MooseX::Attribute::ValidateWithException::Exception;
 
 # ABSTRACT: An Exception object to represent "Normal" moose validation failures.
 
-use Moose;
+use Moose qw( extends has );
 
 #with 'StackTrace::Auto';
 

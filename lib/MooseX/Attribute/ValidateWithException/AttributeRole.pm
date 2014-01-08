@@ -3,7 +3,7 @@ use strict;
 use warnings;
 
 package MooseX::Attribute::ValidateWithException::AttributeRole;
-use Moose::Role;
+use Moose::Role qw( override );
 
 sub __generate_check {
   my ( $self, %params ) = @_;
