@@ -1,4 +1,8 @@
-0.3.0
+0.3.1
+ [Changed / runtime requires]
+ - Moose 2.1100 → 2.1200
+
+0.3.0 2013-11-28T16:41:47Z
  [Changed / build requires]
  - Module::Build 0.4004 → 0.4203
 
