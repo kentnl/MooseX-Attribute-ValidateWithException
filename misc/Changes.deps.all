@@ -6,6 +6,7 @@ This file contains ALL changes in dependencies in both REQUIRED / OPTIONAL depen
 
  [Added / develop requires]
  - Dist::Zilla::Plugin::Git::NextRelease
+ - Dist::Zilla::Plugin::Prereqs::Recommend::MatchInstalled
  - Dist::Zilla::Plugin::Test::ReportPrereqs
  - English
  - Test::EOL
