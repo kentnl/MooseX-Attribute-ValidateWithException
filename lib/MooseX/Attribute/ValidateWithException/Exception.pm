@@ -4,6 +4,8 @@ use warnings;
 
 package MooseX::Attribute::ValidateWithException::Exception;
 
+our $VERSION = 'v0.4.0';
+
 # ABSTRACT: An Exception object to represent "Normal" moose validation failures.
 
 use Moose qw( extends has );

@@ -4,6 +4,8 @@ use warnings;
 
 package MooseX::Attribute::ValidateWithException::AttributeRole;
 
+our $VERSION = 'v0.4.0';
+
 # ABSTRACT: Role to apply attribute properties to an attribute.
 
 use Moose::Role qw( override );

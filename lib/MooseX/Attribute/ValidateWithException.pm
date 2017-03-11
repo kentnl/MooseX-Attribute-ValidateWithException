@@ -4,6 +4,8 @@ use warnings;
 
 package MooseX::Attribute::ValidateWithException;
 
+our $VERSION = 'v0.4.0';
+
 # ABSTRACT: Cause validation failures to throw exception objects.
 
 require Moose;
