@@ -4,7 +4,7 @@ MooseX::Attribute::ValidateWithException - Cause validation failures to throw ex
 
 # VERSION
 
-version 0.3.1
+version 0.3.2
 
 # SYNOPSIS
 
@@ -32,7 +32,7 @@ version 0.3.1
 
 # DESCRIPTION
 
-__ALPHA QUALITY SOFTWARE__.
+**ALPHA QUALITY SOFTWARE**.
 
 At present, when an attribute fails validation, Moose internally die()'s with a
 string. There is also no way to throw an exception object as part of the
@@ -48,12 +48,12 @@ release, in order to permit Moose to do whatever they want and not worry about
 "breaking code" that uses this module. ( So that they can easily replace this
 module in incompatible ways )
 
-__If your code breaking is unacceptable, do _not_ use this module__.
+**If your code breaking is unacceptable, do _not_ use this module**.
 
 Use of this module assumes several things.
 
-1. You are o.k. with your code breaking in a future Moose release.
-2. You are o.k. with re-writing any and all code that depends on this
+- 1. You are o.k. with your code breaking in a future Moose release.
+- 2. You are o.k. with re-writing any and all code that depends on this
 functionality, if a future Moose release is incompatible with this module.
 
 I'm not saying I won't do my best to provide forwards compatibility, but it is
@@ -66,7 +66,7 @@ Kent Fredric <kentnl@cpan.org>
 
 # COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2014 by Kent Fredric <kentnl@cpan.org>.
+This software is copyright (c) 2017 by Kent Fredric <kentnl@cpan.org>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

@@ -1,6 +1,14 @@
 ﻿Release history for MooseX-Attribute-ValidateWithException
 
 {{$NEXT}}
+ - Bugfix: Avoid test failures with -Ddefault_inc_excludes_dot
+
+ [Dependencies::Stats]
+ - Dependencies changed since 0.3.1, see misc/*.deps* for details
+ - build: ↑1
+ - configure: +1 ↑1
+ - develop: +4 ↑2
+ - test: +1 ↑1
 
 0.3.1 2014-01-08T04:40:40Z
  [00 Minor]
@@ -8,16 +16,14 @@
  - Minor docs improvements.
 
  [Dependencies::Stats]
- - Dependencies changed since 0.3.0, see Changes.deps{,.all,.dev} for
-   details
+ - Dependencies changed since 0.3.0, see misc/*.deps* for details
  - develop: +3 ↑1 -4
  - runtime: ↑1
 
 0.3.0 2013-11-28T16:41:47Z
  [00 Major]
  - Refactored to work better with Moose 2.1100
- - Code is now mostly a compatibility shim, because Moose has exceptions
-   default
+ - Code is now mostly a compatibility shim, because Moose has exceptions default
 
  [Dependencies::Noteworthy]
  - now requires Moose >2.1100
@@ -25,11 +31,10 @@
  - now requires Test::More 1.001002
 
  [Dependencies::Stats]
- - Dependencies changed since 0.2.2, see Changes.deps{,.all,.dev} for
-   details
+ - Dependencies changed since 0.2.2, see misc/*.deps* for details
  - build: ↑1
  - configure: ↑1
- - develop: +46 -3
+ - develop: +45 -1 (recommends: -1, suggests: +1 -1)
  - runtime: ↑1
  - test: ↑1 -2
 
@@ -41,11 +46,10 @@
  - use Test::More 0.98
 
  [Dependencies::Stats]
- - Dependencies changed since 0.2.1, see Changes.deps{,.all,.dev} for
-   details
+ - Dependencies changed since 0.2.1, see misc/*.deps* for details
  - build: ↑1
  - configure: ↑1
- - develop: +5 ↑1
+ - develop: +5 (suggests: ↑1)
  - test: ↑1
 
  [Documentation]
@@ -65,9 +69,8 @@
  - Minor maintenance release
 
  [Dependencies::Stats]
- - Dependencies changed since 0.2.0, see Changes.deps{,.all,.dev} for
-   details
- - develop: ↑2
+ - Dependencies changed since 0.2.0, see misc/*.deps* for details
+ - develop: (recommends: ↑1, suggests: ↑1)
  - runtime: +3
  - test: -1
 
@@ -83,20 +86,17 @@
 0.2.0 2011-07-26T00:18:24Z
  [Bugfix]
  - Fix compatibility with Moose 2.020???. This hopefully fixes rt#60461 (
-   https://rt.cpan.org/Public/Bug/Display.html?id=69461 ), thanks ANDK for
-   reporting.
+   https://rt.cpan.org/Public/Bug/Display.html?id=69461 ), thanks ANDK for reporting.
 
  [Dependencies::Noteworthy]
  - upgrade to Moose 2.0200
 
  [Dependencies::Stats]
- - Dependencies changed since 0.1.1, see Changes.deps{,.all,.dev} for
-   details
+ - Dependencies changed since 0.1.1, see misc/*.deps* for details
  - runtime: ↑1
 
  [Packaging]
- - Bumping minor version due to dependency changes being not reverse
-   compatible.
+ - Bumping minor version due to dependency changes being not reverse compatible.
 
 0.1.1 2011-06-18T02:24:30Z
  [Bugfix]
@@ -104,4 +104,3 @@
 
 0.1.0 2011-06-18T00:27:59Z
  - First version.
-
