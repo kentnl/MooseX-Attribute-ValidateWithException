@@ -8,6 +8,8 @@ our $VERSION = 'v0.4.0';
 
 # ABSTRACT: An Exception object to represent "Normal" moose validation failures.
 
+# AUTHORITY
+
 use Moose qw( extends has );
 
 #with 'StackTrace::Auto';
