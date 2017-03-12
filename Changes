@@ -1,13 +1,13 @@
 Release history for MooseX-Attribute-ValidateWithException
 
-0.3.2 2017-03-12T02:28:41Z
+0.3.2 2017-03-12T02:28:47Z
  - Bugfix: Avoid test failures with -Ddefault_inc_excludes_dot
 
  [Dependencies::Stats]
  - Dependencies changed since 0.3.1, see misc/*.deps* for details
  - build: ↑1
  - configure: +1 ↑1
- - develop: +4 ↑2
+ - develop: +5 ↑2 -1
  - test: +1 ↑1
 
 0.3.1 2014-01-08T04:40:40Z

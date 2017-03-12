@@ -2,6 +2,7 @@ This file contains changes to DEVELOPMENT dependencies only ( both REQUIRED and 
 
 0.3.2
  [Added / develop requires]
+ - Dist::Zilla::Plugin::Git::NextRelease
  - English
  - Test::EOL
  - Test::MinimumVersion
@@ -10,6 +11,9 @@ This file contains changes to DEVELOPMENT dependencies only ( both REQUIRED and 
  [Changed / develop requires]
  - Dist::Zilla::PluginBundle::Author::KENTNL 2.007003 → 2.025021
  - Test::Kwalitee 1.12 → 1.21
+
+ [Removed / develop requires]
+ - Dist::Zilla::Plugin::NextRelease
 
 0.3.1 2014-01-08T04:40:40Z
  [Added / develop requires]
