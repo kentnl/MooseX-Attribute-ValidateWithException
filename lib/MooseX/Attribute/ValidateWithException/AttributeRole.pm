@@ -3,12 +3,13 @@ use strict;
 use warnings;
 
 package MooseX::Attribute::ValidateWithException::AttributeRole;
-BEGIN {
-  $MooseX::Attribute::ValidateWithException::AttributeRole::AUTHORITY = 'cpan:KENTNL';
-}
-{
-  $MooseX::Attribute::ValidateWithException::AttributeRole::VERSION = '0.3.1';
-}
+
+our $VERSION = 'v0.4.0';
+
+# ABSTRACT: Role to apply attribute properties to an attribute.
+
+our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
+
 use Moose::Role qw( override );
 
 sub __generate_check {
@@ -25,7 +26,7 @@ sub __generate_check {
 override '_inline_check_constraint' => sub {
 
   my $self = shift;
-  my ( $value, $tc, $message, $is_lazy ) = @_;
+  my ( $value, $tc, $message, ) = @_;
 
   my $attribute_name = quotemeta( $self->name );
 
@@ -96,11 +97,11 @@ __END__
 
 =head1 NAME
 
-MooseX::Attribute::ValidateWithException::AttributeRole
+MooseX::Attribute::ValidateWithException::AttributeRole - Role to apply attribute properties to an attribute.
 
 =head1 VERSION
 
-version 0.3.1
+version v0.4.0
 
 =head1 AUTHOR
 
@@ -108,7 +109,7 @@ Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2014 by Kent Fredric <kentnl@cpan.org>.
+This software is copyright (c) 2017 by Kent Fredric <kentnl@cpan.org>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

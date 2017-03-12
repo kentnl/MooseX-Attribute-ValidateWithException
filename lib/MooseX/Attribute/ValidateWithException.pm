@@ -1,16 +1,15 @@
+## no critic (Moose::RequireMakeImmutable)
 use 5.006;    # warnings
 use strict;
 use warnings;
 
 package MooseX::Attribute::ValidateWithException;
-BEGIN {
-  $MooseX::Attribute::ValidateWithException::AUTHORITY = 'cpan:KENTNL';
-}
-{
-  $MooseX::Attribute::ValidateWithException::VERSION = '0.3.1';
-}
+
+our $VERSION = 'v0.4.0';
 
 # ABSTRACT: Cause validation failures to throw exception objects.
+
+our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 
 require Moose;
 use Moose::Exporter;
@@ -18,6 +17,66 @@ require MooseX::Attribute::ValidateWithException::AttributeRole;
 
 Moose::Exporter->setup_import_methods(
   class_metaroles => { attribute => ['MooseX::Attribute::ValidateWithException::AttributeRole'], }, );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 1;
@@ -34,7 +93,7 @@ MooseX::Attribute::ValidateWithException - Cause validation failures to throw ex
 
 =head1 VERSION
 
-version 0.3.1
+version v0.4.0
 
 =head1 SYNOPSIS
 
@@ -101,7 +160,7 @@ Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2014 by Kent Fredric <kentnl@cpan.org>.
+This software is copyright (c) 2017 by Kent Fredric <kentnl@cpan.org>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

@@ -1,2 +1,3 @@
-.build
-MooseX-Attribute-ValidateWithException-*
+/.build
+/MooseX-Attribute-ValidateWithException-*
+/tmp/
