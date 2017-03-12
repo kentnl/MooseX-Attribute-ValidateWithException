@@ -8,6 +8,8 @@ our $VERSION = 'v0.4.0';
 
 # ABSTRACT: Cause validation failures to throw exception objects.
 
+our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
+
 require Moose;
 use Moose::Exporter;
 require MooseX::Attribute::ValidateWithException::AttributeRole;

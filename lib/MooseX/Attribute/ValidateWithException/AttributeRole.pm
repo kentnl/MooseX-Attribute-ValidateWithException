@@ -8,6 +8,8 @@ our $VERSION = 'v0.4.0';
 
 # ABSTRACT: Role to apply attribute properties to an attribute.
 
+our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
+
 use Moose::Role qw( override );
 
 sub __generate_check {
