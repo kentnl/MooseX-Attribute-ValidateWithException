@@ -3,7 +3,9 @@ use strict;
 use warnings;
 
 package MooseX::Attribute::ValidateWithException::AttributeRole;
-$MooseX::Attribute::ValidateWithException::AttributeRole::VERSION = '0.3.2';
+
+our $VERSION = 'v0.4.0';
+
 # ABSTRACT: Role to apply attribute properties to an attribute.
 
 use Moose::Role qw( override );
@@ -97,7 +99,7 @@ MooseX::Attribute::ValidateWithException::AttributeRole - Role to apply attribut
 
 =head1 VERSION
 
-version 0.3.2
+version v0.4.0
 
 =head1 AUTHOR
 
