@@ -3,13 +3,8 @@ use strict;
 use warnings;
 
 package MooseX::Attribute::ValidateWithException::Exception;
-BEGIN {
-  $MooseX::Attribute::ValidateWithException::Exception::AUTHORITY = 'cpan:KENTNL';
-}
-{
-  $MooseX::Attribute::ValidateWithException::Exception::VERSION = '0.3.2';
-}
-
+our $AUTHORITY = 'cpan:KENTNL';
+$MooseX::Attribute::ValidateWithException::Exception::VERSION = '0.3.2';
 # ABSTRACT: An Exception object to represent "Normal" moose validation failures.
 
 use Moose qw( extends has );
@@ -83,7 +78,7 @@ Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2014 by Kent Fredric <kentnl@cpan.org>.
+This software is copyright (c) 2017 by Kent Fredric <kentnl@cpan.org>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
