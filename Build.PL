@@ -22,6 +22,9 @@ my %module_build_args = (
   "dist_version" => "0.3.2",
   "license" => "perl",
   "module_name" => "MooseX::Attribute::ValidateWithException",
+  "recommends" => {
+    "Moose" => "2.000"
+  },
   "recursive_test_files" => 1,
   "requires" => {
     "Moose" => "2.1200",
