@@ -15,11 +15,13 @@ dist.ini.meta
 lib/MooseX/Attribute/ValidateWithException.pm
 lib/MooseX/Attribute/ValidateWithException/AttributeRole.pm
 lib/MooseX/Attribute/ValidateWithException/Exception.pm
+maint/perlcritic.rc.gen.pl
 misc/Changes.deps
 misc/Changes.deps.all
 misc/Changes.deps.dev
 misc/Changes.deps.opt
 misc/built_with.json
+misc/perlcritic.deps
 perlcritic.rc
 t/00-compile/lib_MooseX_Attribute_ValidateWithException_AttributeRole_pm.t
 t/00-compile/lib_MooseX_Attribute_ValidateWithException_Exception_pm.t

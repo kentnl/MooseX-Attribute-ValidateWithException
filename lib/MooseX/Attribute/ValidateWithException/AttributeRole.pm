@@ -26,7 +26,7 @@ sub __generate_check {
 override '_inline_check_constraint' => sub {
 
   my $self = shift;
-  my ( $value, $tc, $message, $is_lazy ) = @_;
+  my ( $value, $tc, $message, ) = @_;
 
   my $attribute_name = quotemeta( $self->name );
 
