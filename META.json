@@ -126,15 +126,15 @@
    "provides" : {
       "MooseX::Attribute::ValidateWithException" : {
          "file" : "lib/MooseX/Attribute/ValidateWithException.pm",
-         "version" : "v0.4.0"
+         "version" : "v0.4.1"
       },
       "MooseX::Attribute::ValidateWithException::AttributeRole" : {
          "file" : "lib/MooseX/Attribute/ValidateWithException/AttributeRole.pm",
-         "version" : "v0.4.0"
+         "version" : "v0.4.1"
       },
       "MooseX::Attribute::ValidateWithException::Exception" : {
          "file" : "lib/MooseX/Attribute/ValidateWithException/Exception.pm",
-         "version" : "v0.4.0"
+         "version" : "v0.4.1"
       }
    },
    "release_status" : "stable",
@@ -149,7 +149,7 @@
          "web" : "https://github.com/kentnl/MooseX-Attribute-ValidateWithException"
       }
    },
-   "version" : "v0.4.0",
+   "version" : "v0.4.1",
    "x_BuiltWith" : {
       "external_file" : "misc/built_with.json"
    },
@@ -655,7 +655,7 @@
                   "branch" : null,
                   "changelog" : "Changes",
                   "signed" : 0,
-                  "tag" : "v0.4.0-source",
+                  "tag" : "v0.4.1-source",
                   "tag_format" : "%v-source",
                   "tag_message" : "v%v"
                },
@@ -749,7 +749,7 @@
                   "branch" : "releases",
                   "changelog" : "Changes",
                   "signed" : 0,
-                  "tag" : "v0.4.0",
+                  "tag" : "v0.4.1",
                   "tag_format" : "%v",
                   "tag_message" : "v%v"
                },

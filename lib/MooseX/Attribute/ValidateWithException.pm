@@ -5,7 +5,7 @@ use warnings;
 
 package MooseX::Attribute::ValidateWithException;
 
-our $VERSION = 'v0.4.0';
+our $VERSION = 'v0.4.1';
 
 # ABSTRACT: Cause validation failures to throw exception objects.
 
@@ -93,7 +93,7 @@ MooseX::Attribute::ValidateWithException - Cause validation failures to throw ex
 
 =head1 VERSION
 
-version v0.4.0
+version v0.4.1
 
 =head1 SYNOPSIS
 

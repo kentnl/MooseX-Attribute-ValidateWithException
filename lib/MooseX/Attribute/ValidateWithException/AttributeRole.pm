@@ -4,7 +4,7 @@ use warnings;
 
 package MooseX::Attribute::ValidateWithException::AttributeRole;
 
-our $VERSION = 'v0.4.0';
+our $VERSION = 'v0.4.1';
 
 # ABSTRACT: Role to apply attribute properties to an attribute.
 
@@ -101,7 +101,7 @@ MooseX::Attribute::ValidateWithException::AttributeRole - Role to apply attribut
 
 =head1 VERSION
 
-version v0.4.0
+version v0.4.1
 
 =head1 AUTHOR
 
