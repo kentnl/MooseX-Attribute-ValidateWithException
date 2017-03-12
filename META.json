@@ -58,13 +58,13 @@
             "Dist::Zilla::Plugin::Prereqs::MatchInstalled" : "0",
             "Dist::Zilla::Plugin::ReadmeAnyFromPod" : "0",
             "Dist::Zilla::Plugin::ReadmeFromPod" : "0",
-            "Dist::Zilla::Plugin::ReportVersions::Tiny" : "0",
             "Dist::Zilla::Plugin::RunExtraTests" : "0",
             "Dist::Zilla::Plugin::Test::CPAN::Changes" : "0",
             "Dist::Zilla::Plugin::Test::Compile::PerFile" : "0",
             "Dist::Zilla::Plugin::Test::Kwalitee" : "0",
             "Dist::Zilla::Plugin::Test::MinimumVersion" : "0",
             "Dist::Zilla::Plugin::Test::Perl::Critic" : "0",
+            "Dist::Zilla::Plugin::Test::ReportPrereqs" : "0",
             "Dist::Zilla::Plugin::TestRelease" : "0",
             "Dist::Zilla::Plugin::Twitter" : "0",
             "Dist::Zilla::Plugin::UploadToCPAN" : "0",
@@ -78,8 +78,7 @@
             "Test::MinimumVersion" : "0",
             "Test::More" : "1.302073",
             "Test::Pod" : "1.41",
-            "Test::Pod::Coverage" : "1.08",
-            "version" : "0.9901"
+            "Test::Pod::Coverage" : "1.08"
          },
          "suggests" : {
             "Dist::Zilla::PluginBundle::Author::KENTNL::Lite" : "v1.3.0"
@@ -97,7 +96,12 @@
          }
       },
       "test" : {
+         "recommends" : {
+            "CPAN::Meta" : "2.120900"
+         },
          "requires" : {
+            "ExtUtils::MakeMaker" : "0",
+            "File::Spec" : "0",
             "Test::Fatal" : "0",
             "Test::More" : "1.302073",
             "perl" : "5.006"
@@ -133,6 +137,7 @@
    "version" : "0.3.2",
    "x_BuiltWith" : {
       "modules" : {
+         "CPAN::Meta" : "2.150010",
          "Dist::Zilla::Plugin::Authority" : "1.009",
          "Dist::Zilla::Plugin::AutoPrereqs" : "6.009",
          "Dist::Zilla::Plugin::ConfirmRelease" : "6.009",
@@ -164,19 +169,21 @@
          "Dist::Zilla::Plugin::Prereqs::MatchInstalled" : "1.001002",
          "Dist::Zilla::Plugin::ReadmeAnyFromPod" : "0.163250",
          "Dist::Zilla::Plugin::ReadmeFromPod" : "0.35",
-         "Dist::Zilla::Plugin::ReportVersions::Tiny" : "1.12",
          "Dist::Zilla::Plugin::RunExtraTests" : "0.029",
          "Dist::Zilla::Plugin::Test::CPAN::Changes" : "0.012",
          "Dist::Zilla::Plugin::Test::Compile::PerFile" : "0.004000",
          "Dist::Zilla::Plugin::Test::Kwalitee" : "2.12",
          "Dist::Zilla::Plugin::Test::MinimumVersion" : "2.000007",
          "Dist::Zilla::Plugin::Test::Perl::Critic" : "3.000",
+         "Dist::Zilla::Plugin::Test::ReportPrereqs" : "0.025",
          "Dist::Zilla::Plugin::TestRelease" : "6.009",
          "Dist::Zilla::Plugin::Twitter" : "0.026",
          "Dist::Zilla::Plugin::UploadToCPAN" : "6.009",
          "Dist::Zilla::PluginBundle::Author::KENTNL" : "2.025021",
          "Dist::Zilla::PluginBundle::Author::KENTNL::Lite" : "2.001001",
          "English" : "1.10",
+         "ExtUtils::MakeMaker" : "7.24",
+         "File::Spec" : "3.66",
          "Module::Build" : "0.4220",
          "Moose" : "2.2004",
          "Moose::Exporter" : "2.2004",
@@ -193,7 +200,6 @@
          "Test::Pod::Coverage" : "1.10",
          "Throwable::Error" : "0.200013",
          "strict" : "1.11",
-         "version" : "0.9917",
          "warnings" : "1.37"
       },
       "perl" : {
@@ -356,9 +362,9 @@
             "version" : "6.009"
          },
          {
-            "class" : "Dist::Zilla::Plugin::ReportVersions::Tiny",
-            "name" : "@Author::KENTNL/ReportVersions::Tiny",
-            "version" : "1.12"
+            "class" : "Dist::Zilla::Plugin::Test::ReportPrereqs",
+            "name" : "@Author::KENTNL/Test::ReportPrereqs",
+            "version" : "0.025"
          },
          {
             "class" : "Dist::Zilla::Plugin::Test::Kwalitee",

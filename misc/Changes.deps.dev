@@ -3,6 +3,7 @@ This file contains changes to DEVELOPMENT dependencies only ( both REQUIRED and 
 0.3.2
  [Added / develop requires]
  - Dist::Zilla::Plugin::Git::NextRelease
+ - Dist::Zilla::Plugin::Test::ReportPrereqs
  - English
  - Test::EOL
  - Test::MinimumVersion
@@ -14,6 +15,8 @@ This file contains changes to DEVELOPMENT dependencies only ( both REQUIRED and 
 
  [Removed / develop requires]
  - Dist::Zilla::Plugin::NextRelease
+ - Dist::Zilla::Plugin::ReportVersions::Tiny
+ - version 0.9901
 
 0.3.1 2014-01-08T04:40:40Z
  [Added / develop requires]

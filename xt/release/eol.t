@@ -13,7 +13,8 @@ my @files = (
     't/00-compile/lib_MooseX_Attribute_ValidateWithException_AttributeRole_pm.t',
     't/00-compile/lib_MooseX_Attribute_ValidateWithException_Exception_pm.t',
     't/00-compile/lib_MooseX_Attribute_ValidateWithException_pm.t',
-    't/000-report-versions-tiny.t',
+    't/00-report-prereqs.dd',
+    't/00-report-prereqs.t',
     't/01-basic.t'
 );
 
