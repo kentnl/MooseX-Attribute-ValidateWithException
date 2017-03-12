@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 
-use Test::More;
+use Test::More tests => 1;
 
 {
 
@@ -31,6 +31,3 @@ isa_ok( $e, 'MooseX::Attribute::ValidateWithException::Exception' );
 note explain $e;
 
 note "$e";
-
-done_testing;
-
