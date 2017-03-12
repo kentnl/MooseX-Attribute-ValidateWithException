@@ -3,7 +3,6 @@ use strict;
 use warnings;
 
 package MooseX::Attribute::ValidateWithException;
-our $AUTHORITY = 'cpan:KENTNL';
 $MooseX::Attribute::ValidateWithException::VERSION = '0.3.2';
 # ABSTRACT: Cause validation failures to throw exception objects.
 

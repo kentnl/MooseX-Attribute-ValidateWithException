@@ -3,7 +3,6 @@ use strict;
 use warnings;
 
 package MooseX::Attribute::ValidateWithException::AttributeRole;
-our $AUTHORITY = 'cpan:KENTNL';
 $MooseX::Attribute::ValidateWithException::AttributeRole::VERSION = '0.3.2';
 # ABSTRACT: Role to apply attribute properties to an attribute.
 

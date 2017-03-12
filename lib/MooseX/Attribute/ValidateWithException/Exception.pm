@@ -3,7 +3,6 @@ use strict;
 use warnings;
 
 package MooseX::Attribute::ValidateWithException::Exception;
-our $AUTHORITY = 'cpan:KENTNL';
 $MooseX::Attribute::ValidateWithException::Exception::VERSION = '0.3.2';
 # ABSTRACT: An Exception object to represent "Normal" moose validation failures.
 
